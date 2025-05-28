@@ -337,6 +337,7 @@ body {
     justify-content: space-between;
     height: 100%;
     box-sizing: border-box;
+    gap: 16px;
 }
 
 .icono {
@@ -352,15 +353,16 @@ body {
 
 .titulo_tarjeta {
     font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 10px;
     flex-shrink: 0;
     text-align: left;
+    line-height: 24px;
 }
 
 .texto_tarjeta {
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
-    flex-grow: 1;
+    gap: 8px;
     text-align: left;
 }
 
@@ -371,6 +373,7 @@ a.boton_final {
     text-decoration: none;
     background-color: var(--color-de-boton-e-iconos-tarjetas);
     font-size: 16px;
+    font-weight: 700;
     padding: 12px 48px;
     border-radius: 8px;
 }
@@ -501,18 +504,27 @@ hr {
 }
 
 @media (max-width: 1025px) {
+    .contenedor_de_compra_general{
+          padding: 62px 0px 80px;    
+    }
     .contenedor_promo-foto {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+        align-items: flex-start;  
+        padding: 0px 40px;
+        margin: 0px 128px;
     }
     .promocion {
-        padding-right: 0;
         text-align: left;
         width: 100%;
     }
     .titulo_y_parrafo-header {
         text-align: left;
+    }
+    .titulo{
+        font-size: 28px;
+    }
+    .debajo_titulo-header{
+        font-size: 18px;
     }
     .header-lista {
         align-items: flex-start;
@@ -525,13 +537,28 @@ hr {
         margin-top: 20px;
         width: 100%;
     }
+    .secction{
+        padding: 64px 0;
+    }
+    .contenedor_titulo{
+        margin: 0px 128px 40px;
+        padding: 0px 40px;
+    }
+    .titulo_principal{
+        font-size: 28px;
+
+    }
     .contenedor_tarjetas {
         flex-direction: column;
         align-items: stretch;
+        width: auto;
+        margin: auto;
+        padding: 0px 40px;
+        margin: 0px 56px;
     }
     .tarjetas {
         max-width: 100%;
-        min-height: 250px;
+        max-width: 768px;
         height: auto;
     }
     .pagos-politicas {
@@ -543,6 +570,13 @@ hr {
     .politicas {
         margin-bottom: 16px;
     }
+    .footer-general{
+        padding: 40px 0px 0px;
+    }
+    .footer-contenido{
+        padding: 0px 40px;
+        margin: 20px 128px 0px  ;
+    }
     .tarjetas_footer {
         justify-content: flex-start;
     }
@@ -553,6 +587,29 @@ hr {
 }
 
 @media (max-width: 770px) {
+    .footer-contenido{
+        max-width: 540px;
+        margin: auto;
+    }
+    .footer-general{
+        padding: 48px 0px 0px;
+    }
+    .contenedor_promo-foto{
+        margin: 0px 1px;
+        padding: 0px 40px;
+    }
+    .contenedor_titulo{
+        margin: 0px 0px 40px;
+        padding: 0px 40px;
+
+    }
+    .contenedor_tarjetas{
+        padding: 0px 40px;
+        margin: 0;
+    }
+    .tarjetas{
+        
+    }
     .logo-redes {
         flex-direction: column-reverse;
         align-items: flex-start;
@@ -611,6 +668,17 @@ hr {
     .debajo_titulo {
         font-size: 16px;
     }
+    .contenedor_de_compra_general{
+        padding: 14px 0px 36px;
+        
+    }
+    .contenedor_promo-foto{
+        margin: auto;
+        padding: 0px 16px;
+    }
+    .promocion{
+        padding: 0;
+    }
     .numero-precio {
         font-size: 36px;
     }
@@ -620,5 +688,7 @@ hr {
     .tarjetas {
         padding: 20px;
     }
-   
+    .footer-contenido{
+        padding: 0px 16px;
+    }   
 }
