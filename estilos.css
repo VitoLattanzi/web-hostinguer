@@ -1,0 +1,624 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    --color-fondo-header: #ffffff;
+    --color-principal-300: #1e1345;
+    --color-letra-blanco: #ffffff;
+    --color-letra-negro: #1d1e20;
+    --color-de-fondo-tarjetas: #301c6b;
+    --color-de-boton-e-iconos-tarjetas: #683ee6;
+    --color-letra-header: #2F1C6A;
+    --color-prcentaje-descuento: #683ee6;
+    --color-boton-tiempo: #e3dcfc;
+    --color-boton-claim: #683ee6;
+    --color-check-lista: #00b090;
+    --color-linea-footer: #d6e0ff;
+    --color-and_more-pagos: #673de6;
+}
+
+* {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.header_completo {
+    color: var(--color-letra-negro);
+    background-color: var(--color-fondo-header);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    top: 0;
+    height: 80px;
+    z-index: 999;
+}
+
+.parte_izquierda_header {
+    padding: 29px 0 29px 40px;
+}
+
+.logo_hostinguer {
+    align-items: center;
+}
+
+.contenedor_navegador {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.navegador_header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-left: 40px;
+}
+
+.navegador_header a {
+    text-decoration: none;
+    color: var(--color-letra-negro);
+    font-weight: 500;
+}
+
+.chevron-down::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg);
+    margin-left: 6px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+}
+
+.parte_derecha_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--color-letra-negro);
+    padding-right: 40px;
+}
+
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--color-letra-negro);
+    font-weight: bold;
+}
+
+.bandera {
+    width: 32px;
+    height: auto;
+}
+
+.boton_login {
+    padding: 12px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-letra-negro);
+    border: 2px solid;
+    border-color: var(--color-letra-negro);
+    border-radius: 8px;
+}
+
+.menu-hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-letra-negro);
+    padding: 10px;
+}
+
+.contenedor_de_compra_general {
+    padding: 2rem;
+    color: var(--color-letra-header);
+    justify-content: center;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.contenedor_promo-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 auto;
+    gap: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.promocion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
+    min-height: auto;
+    height: auto;
+}
+
+.titulo_y_parrafo-header {
+    margin: 0px 0px 24px;
+    text-align: start;
+    margin-bottom: 0;
+}
+
+.titulo {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.debajo_titulo-header {
+    font-size: 20px;
+    margin-top: 8px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.porcentaje_descuento {
+    color: var(--color-prcentaje-descuento);
+}
+
+.header-lista {
+    font-size: 16px;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin: 24px 0px;
+}
+
+.lineas-listas {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 2px;
+    gap: 8px;
+}
+
+.tick-lista {
+    color: var(--color-check-lista);
+}
+
+.contenedor_precio-header {
+    margin-bottom: 8px;
+}
+
+.precio {
+    font-size: 20px;
+}
+
+.numero-precio {
+    font-weight: 700;
+    font-size: 46px;
+}
+
+.contenedor_meses {
+    margin-bottom: 8px;
+}
+
+.meses {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.botones {
+    display: flex;
+    gap: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: start;
+    margin-bottom: 8px;
+}
+
+.boton-claim {
+    color: var(--color-letra-blanco);
+    font-size: 16px;
+    background-color: var(--color-boton-claim);
+    border-radius: 8px;
+    padding: 12px 48px;
+    text-decoration: none;
+}
+
+.tiempo {
+    font-size: 16px;
+    background-color: var(--color-boton-tiempo);
+    border-radius: 8px;
+    padding: 12px 48px;
+}
+
+.DEBAJO_BOTONES {
+    margin-bottom: 6px;
+}
+
+.texto_final_hero {
+    font-size: 16px;
+}
+
+.foto {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.foto img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+.secction {
+    background-color: var(--color-principal-300);
+    padding: 80px 0;
+    color: var(--color-letra-blanco);
+}
+
+.secction_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+    text-align: left;
+}
+
+.secction_content p {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contenedor_titulo {
+    margin: 0px 0px 48px;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.titulo_principal {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.debajo_titulo {
+    font-size: 16px;
+}
+
+.contenedor_tarjetas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    align-items: stretch;
+}
+
+.contenido_tarjeta {
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjetas {
+    flex: 1 1 0;
+    max-width: 350px;
+    background-color: var(--color-de-fondo-tarjetas);
+    padding: 32px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.icono {
+    background-color: var(--color-de-boton-e-iconos-tarjetas);
+    align-items: center;
+    border-radius: 6px;
+    display: flex;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+}
+
+.titulo_tarjeta {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.texto_tarjeta {
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+a.boton_final {
+    display: inline-block;
+    margin-top: 32px;
+    color: var(--color-letra-blanco);
+    text-decoration: none;
+    background-color: var(--color-de-boton-e-iconos-tarjetas);
+    font-size: 16px;
+    padding: 12px 48px;
+    border-radius: 8px;
+}
+
+.footer-general {
+    background-color: var(--color-fondo-header);
+    color: var(--color-letra-header);
+    font-size: 14px;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pagos-redes {
+    padding: 0px 0px 24px;
+}
+
+.logo-redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+.recuadro-redes {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: var(--color-letra-header);
+    font-size: 24px;
+}
+
+.pagos-politicas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    align-items: center;
+}
+
+.tarjetas_footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.banco {
+    width: 60px;
+    height: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: var(--color-linea-footer);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.y-mas {
+    color: var(--color-and_more-pagos);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.politicas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.c-politica {
+    text-decoration: none;
+    color: var(--color-letra-header);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-linea-footer);
+    margin: 0;
+}
+
+.finalfinal {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px;
+    gap: 128px;
+}
+
+@media (max-width: 1140px) {
+    .navegador_header,
+    .boton_login,
+    .idioma {
+        display: none;
+    }
+    .menu-hamburguesa {
+        display: block;
+    }
+    .navegador_header.active,
+    .parte_derecha_header.active .idioma,
+    .parte_derecha_header.active .boton_login {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-fondo-header);
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        align-items: flex-start;
+    }
+    .navegador_header.active a {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1025px) {
+    .contenedor_promo-foto {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .promocion {
+        padding-right: 0;
+        text-align: left;
+        width: 100%;
+    }
+    .titulo_y_parrafo-header {
+        text-align: left;
+    }
+    .header-lista {
+        align-items: flex-start;
+    }
+    .botones {
+        justify-content: flex-start;
+    }
+    .foto {
+        padding: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .contenedor_tarjetas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .tarjetas {
+        max-width: 100%;
+        min-height: 250px;
+        height: auto;
+    }
+    .pagos-politicas {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+    .politicas {
+        margin-bottom: 16px;
+    }
+    .tarjetas_footer {
+        justify-content: flex-start;
+    }
+    .finalfinal {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 770px) {
+    .logo-redes {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .redes {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 16px;
+        gap: 0;
+    }
+    .recuadro-redes {
+        font-size: 20px;
+    }
+    .logo-hostinguer-final {
+        margin-bottom: 16px;
+    }
+    .politicas {
+        flex-direction: row;
+        margin-bottom: 16px;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+    .tarjetas_footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 8px;
+        width: 100%;
+    }
+    .banco {
+        width: 100%;
+        max-width: 60px;
+        height: auto;
+    }
+    .y-mas {
+        font-size: 14px;
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .boton-claim,
+    .tiempo {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 28px;
+    }
+    .debajo_titulo {
+        font-size: 16px;
+    }
+    .numero-precio {
+        font-size: 36px;
+    }
+    .contenedor_tarjetas {
+        padding: 10px;
+    }
+    .tarjetas {
+        padding: 20px;
+    }
+   
+}
