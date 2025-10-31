@@ -25,25 +25,19 @@
 }
 
 body {
-    padding-top: 80px;
+   
 }
 
 .header_completo {
     color: var(--color-letra-negro);
     background-color: var(--color-fondo-header);
-    position: fixed;
-    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0;
     top: 0;
-    height: 80px;
-    z-index: 999;
 }
 
 .parte_izquierda_header {
-    padding: 29px 0 29px 40px;
+    padding: 29px  40px;
 }
 
 .logo_hostinguer {
@@ -54,13 +48,15 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .navegador_header {
     display: flex;
     align-items: center;
     gap: 24px;
-    padding-left: 40px;
+    padding: 0 40px;
 }
 
 .navegador_header a {
